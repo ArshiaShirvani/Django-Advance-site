@@ -1,4 +1,4 @@
-version: "4.32"
+version: "4.32.0"
 services:
   backend:
     build: .
@@ -8,4 +8,7 @@ services:
       - ./core:/app
     ports:
       - "8000:8000"
+    environment:
+      - SECRET_KEY=test
+      - DEBUG=True
     
